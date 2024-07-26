@@ -187,10 +187,10 @@ Include Other Notes on how people can contribute
 
 <!-- Definitions -->
 
-[author]: https://xkeshav.com  
+[author]: https://recursivezero.com  
 
 [collective]: https://opencollective.com/recursivezero
 
-[support]: https://github.com/xkeshav/template/blob/main/.github/SUPPORT.md
+[support]: https://github.com/recursivezero/template/blob/main/.github/SUPPORT.md
 
-[coc]: https://github.com/xkeshav/template/blob/main/.github/CODE_OF_CONDUCT.md
+[coc]: https://github.com/recursivezero/template/blob/main/.github/CODE_OF_CONDUCT.md
