@@ -1,4 +1,4 @@
-# Career
+# Current Openings
 
 ## The Adventure of the Junior Developer Intern
 
@@ -32,6 +32,8 @@ Are you a budding developer ready to embark on an incredible adventure? Here's w
 
 Though the stipend may be minimal, we believe in nurturing talent and providing an exceptional learning experience. Our goal is to create not just great developers but also great employers. Join us on this journey, and together, we’ll build something amazing!
 
-**Apply now, and submit your resume and GitHub profile. The adventure begins!**
+**Apply now, and submit your resume and GitHub profile on the Discussion Page[discussion]. The adventure begins!**
 
 #startuplife #developerintern #learntoearn #python #html #css #javascript #github #coding #tech #internship #opportunity
+
+[discussion]: https://github.com/recursivezero/career/discussions/2
