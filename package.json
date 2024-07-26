@@ -30,9 +30,9 @@
     "name": "Keshav Mohta",
     "email": "xkeshav@gmail.com"
   }],
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node index.js"
   },
   "dependencies": { 
     "@xkeshav/day": "latest",

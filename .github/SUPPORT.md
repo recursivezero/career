@@ -36,20 +36,20 @@ See [`contributing.md`][contributing] on how to contribute.
 
 ## License
 
-© [Keshav Mohta][author]
+:copyright: [Recursive Zero][author]
 
 <!-- Definitions -->
 
-[author]: https://xkeshav.com
+[author]: https://recursivezero.com
 
 [xy]: https://meta.stackexchange.com/questions/66377/what-is-the-xy-problem/66378#66378
 
-[coc]: https://github.com/xkeshav/template/blob/main/.github/CODE_OF_CONDUCT.md
+[coc]: https://github.com/recursivezero/template/blob/main/.github/CODE_OF_CONDUCT.md
 
-[chat]: https://github.com/xkeshav/xkeshav/discussions
+[chat]: https://github.com/recursivezero/career/discussions
 
 [cs]: https://codesandbox.io  
 
 [sb]: https://stackblitz.com
 
-[contributing]: https://github.com/xkeshav/template/blob/main/.github/CONTRIBUTING.md
+[contributing]: https://github.com/recursivezero/template/blob/main/.github/CONTRIBUTING.md
