@@ -9,7 +9,7 @@ Once upon a time, in a land of innovation and technology, there was a fast-growi
 Are you a budding developer ready to embark on an incredible adventure? Here's what awaits you on this journey:
 
 ### What We Offer:
-- **Hands-on Experience:** Dive into the magical realms of Python, HTML, CSS, and JavaScript, honing your skills with every challenge.
+- **Hands-on Experience:** Dive into the magical realms of Python, HTML, CSS, JavaScript and TypeScript, honing your skills with every challenge.
 - **Learn from the Best:** Gain wisdom from experienced wizards of the tech world, discovering the latest spells and trends.
 - **Grow Your Network:** Collaborate with a dynamic team of developers, forging alliances that will last a lifetime.
 - **Showcase Your Skills:** Build a strong GitHub portfolio, showcasing your legendary creations.
@@ -34,6 +34,6 @@ Though the stipend may be minimal, we believe in nurturing talent and providing 
 
 **Apply now, and submit your resume and GitHub profile on the [Discussion Page][discussion]. The adventure begins!**
 
-#startuplife #developerintern #learntoearn #python #html #css #javascript #github #coding #tech #internship #opportunity
+`#startup` `#developer` `#intern` `#learntoearn` `#html` `#css` `#javascript` `#typescript` `#github` `#coding` `#internship` `#opportunity` `#AI`
 
 [discussion]: https://github.com/recursivezero/career/discussions/2
