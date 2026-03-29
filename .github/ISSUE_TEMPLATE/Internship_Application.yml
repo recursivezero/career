@@ -1,7 +1,7 @@
 name: 🚀 Internship Application
 description: Apply for the Front-End or Back-End/AI Internship
 title: "[Application]: Reference Name - Role"
-labels: ["internship", "pending-review"]
+labels: ["applied"]
 assignees: ["recursivezero"]
 body:
   - type: markdown
