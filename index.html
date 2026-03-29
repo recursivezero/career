@@ -1,59 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Career | Junior Developer Intern</title>
+    <title>Internship Opportunity | Developer Quest</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <main class="quest-container">
-        <h1># Current Openings</h1>
+    <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <span class="icon-sun">☀️ Light Mode</span>
+        <span class="icon-moon">🌙 Dark Mode</span>
+    </button>
+
+    <div class="stars"></div>
+
+    <main class="content-card">
+        <header>
+            <div class="badge">HIRING: INTERN 2026</div>
+            <h1>Launch Your Career as a <br><span class="highlight">Junior Developer Intern</span></h1>
+            <p class="subtitle">A 7-day challenge to prove your skills and join our engineering team.</p>
+        </header>
         
-        <section class="intro">
-            <h2>The Adventure of the Junior Developer Intern</h2>
-            <p>Once upon a time, in a land of innovation and technology, there was a fast-growing startup seeking bright and enthusiastic individuals to join their team...</p>
-        </section>
+        <div class="info-section">
+            <div class="perks-grid">
+                <div class="perk-card">
+                    <h3>💻 Tech Stack</h3>
+                    <p>Python, JS, React & TypeScript</p>
+                </div>
+                <div class="perk-card">
+                    <h3>📜 Perks</h3>
+                    <p>Certificate & Mentorship</p>
+                </div>
+            </div>
 
-        <section class="details">
-            <h2>The Journey Awaits</h2>
-            <p>Are you a budding developer ready to embark on an incredible adventure? Here's what awaits you on this journey:</p>
+            <section class="requirements">
+                <h3>What we're looking for:</h3>
+                <ul>
+                    <li>✅ Strong basics in HTML, CSS, and Python.</li>
+                    <li>✅ Ability to build and commit code to GitHub.</li>
+                    <li>✅ Curiosity to learn modern AI-driven development.</li>
+                </ul>
+            </section>
 
-            <h3>What We Offer</h3>
-            <ul>
-                <li><strong>Hands-on Experience:</strong> Dive into the magical realms of Python, HTML, CSS, JavaScript and TypeScript.</li>
-                <li><strong>Learn from the Best:</strong> Gain wisdom from experienced wizards.</li>
-                <li><strong>Grow Your Network:</strong> Collaborate with a dynamic team.</li>
-                <li><strong>Showcase Your Skills:</strong> Build a strong GitHub portfolio.</li>
-            </ul>
-
-            <h3>What We're Looking For</h3>
-            <ul>
-                <li>Strong Foundation in Python, HTML, CSS, and JS.</li>
-                <li>Understanding of Web Development Concepts.</li>
-                <li>Curiosity and Enthusiasm.</li>
-            </ul>
-        </section>
-
-        <section class="apply-box">
-            <h3>The Quest</h3>
-            <ol>
-                <li><strong>The Challenge:</strong> Brave candidates face a 7-day task.</li>
-                <li><strong>The Evaluation:</strong> Code quality and GitHub contributions.</li>
-            </ol>
-            <p>Join us on this journey, and together, we’ll build something amazing!</p>
-            
-            <a href="https://github.com/recursivezero/career/issues/new?template=Internship_Application.yml" class="btn">
-                Apply now from here 👉
-            </a>
-        </section>
-
-        <footer class="tags">
-            <code>#startup</code> <code>#developer</code> <code>#intern</code> <code>#coding</code>
-        </footer>
+            <div class="action-zone">
+                <p class="stipend-note">Note: This is a learning-first internship with a performance-based stipend.</p>
+                <a href="https://github.com/recursivezero/career/issues/new?template=Internship_Application.yml" class="apply-btn">
+                    Apply on GitHub & Start Challenge
+                </a>
+            </div>
+        </div>
     </main>
 
+    <script>
+        const btn = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        btn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+        });
+    </script>
 </body>
 </html>

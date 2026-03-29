@@ -1,81 +1,178 @@
 :root {
-  --bg: #0f172a;
-  --card-bg: rgba(30, 41, 59, 0.5);
-  --accent: #38bdf8;
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-  --border: rgba(255, 255, 255, 0.1);
+  --bg: #030712;
+  --card-bg: rgba(15, 23, 42, 0.8);
+  --text: #f8fafc;
+  --accent: #6366f1;
+  --star-color: rgba(255, 255, 255, 0.4);
+}
+
+[data-theme="light"] {
+  --bg: #f8fafc;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --text: #0f172a;
+  --accent: #4f46e5;
+  --star-color: rgba(79, 70, 229, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin-block: 1rem;
 }
 
 body {
   background-color: var(--bg);
-  color: var(--text-main);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
+  color: var(--text);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: 0.3s ease;
+  padding: 20px;
 }
 
-/* Glassmorphism Card Effect */
-section, .content-wrapper {
+/* GALAXY STARS BACKGROUND */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, var(--star-color), transparent),
+    radial-gradient(1px 1px at 150px 150px, var(--star-color), transparent),
+    radial-gradient(2px 2px at 300px 400px, var(--star-color), transparent);
+  background-size: 400px 400px;
+}
+
+/* THEME TOGGLE */
+.theme-btn {
+  position: absolute;
+  top: 30px;
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--accent);
+  color: var(--text);
+  padding: 8px 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
-h1, h2, h3 {
+[data-theme="dark"] .icon-sun {
+  display: inline;
+}
+
+[data-theme="dark"] .icon-moon {
+  display: none;
+}
+
+[data-theme="light"] .icon-sun {
+  display: none;
+}
+
+[data-theme="light"] .icon-moon {
+  display: inline;
+}
+
+/* THE PROFESSIONAL CARD */
+.content-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 24px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.highlight {
   color: var(--accent);
-  letter-spacing: -0.02em;
 }
 
-h1 { font-size: 2.5rem; text-align: center; margin-bottom: 2rem; }
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  margin: 10px 0;
+}
 
-/* Styling the List Items as "Quest Perks" */
+.badge {
+  color: var(--accent);
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+/* PERKS GRID */
+.perks-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 2rem;
+}
+
+.perk-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+}
+
+/* REQUIREMENTS */
+.requirements {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
 ul {
   list-style: none;
   padding: 0;
 }
 
 li {
-  margin-bottom: 12px;
-  padding-left: 25px;
-  position: relative;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
-li::before {
-  content: "✦";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+/* ACTION AREA */
+.stipend-note {
+  font-size: 12px;
+  color: #64748b;
+  margin-bottom: 10px;
 }
 
-/* The "Call to Action" Button */
-a[href*="github.com"] {
-  display: inline-block;
-  background: linear-gradient(135deg, #38bdf8, #818cf8);
+.apply-btn {
+  display: block;
+  background: var(--accent);
   color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   transition: transform 0.2s, box-shadow 0.2s;
-  margin-top: 20px;
 }
 
-a[href*="github.com"]:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+.apply-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.4);
 }
 
-/* Hashtag Pills */
-code {
-  background: rgba(56, 189, 248, 0.1);
-  color: var(--accent);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .perks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
 }
