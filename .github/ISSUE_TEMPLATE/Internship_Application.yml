@@ -3,7 +3,7 @@ description: Apply for the Front-End or Back-End/AI Internship
 title: "[Application]: [Your Full Name] - [Desired Role]"
 labels: ["applied"]
 assignees: ["recursivezero"]
-project: ["Internship"]
+
 body:
   - type: markdown
     attributes:
