@@ -1,21 +1,26 @@
 name: 🚀 Internship Application
 description: Apply for the Front-End or Back-End/AI Internship
-title: "[Application]: Full Name - Role"
+title: "[Application]: [Your Full Name] - [Desired Role]"
 labels: ["applied"]
 assignees: ["recursivezero"]
+project: ["Internship"]
 body:
   - type: markdown
     attributes:
       value: |
-        ### Thank you for your interest! 
-        Please fill out the details below accurately. We prioritize production-ready skills and a proactive mindset.
+        ### ⚠️ Mandatory Application Instructions
+        At our startup, **attention to detail is our #1 requirement.** * Ensure your issue title follows the format: `[Application]: Firstname Lastname - Role`
+        * Do not leave any default text or placeholders in your answers.
+        * Failure to follow instructions will result in immediate rejection.
+
   - type: input
     id: full_name
     attributes:
       label: Full Name
-      placeholder: e.g. Keshav Mohta
+      placeholder: Enter your legal full name
     validations:
       required: true
+
   - type: dropdown
     id: role
     attributes:
@@ -26,35 +31,47 @@ body:
         - Full-Stack (Both)
     validations:
       required: true
+
   - type: checkboxes
     id: stack
     attributes:
       label: Tech Stack Proficiency
-      description: Check the technologies you have experience with.
+      description: Select only the technologies where you can contribute production-ready code.
       options:
         - label: HTML/CSS/JS (React.js/Astro)
         - label: Node.js / Hono.js
-        - label: Python (AI/ML)
+        - label: Python (FastAPI/AI/ML)
         - label: Computer Vision / Image Processing
+
   - type: textarea
     id: experience
     attributes:
-      label: Brief Overview of Experience
-      description: Describe a real-world project you have worked on.
-      placeholder: I built a URL shortener using Hono.js and MongoDB...
+      label: Real-World Project Proof
+      description: Provide a link to a GitHub repo or a live URL and explain your specific contribution.
+      placeholder: "Example: I optimized the Redis cache layer for a URL shortener which reduced latency by 20%..."
     validations:
       required: true
+
   - type: input
     id: resume
     attributes:
-      label: Resume Link / Upload
-      description: Provide a link to your PDF or upload it to this issue.
+      label: Resume/Portfolio Link
+      description: Provide a public link (Google Drive/Canva/GitHub). Ensure permissions are set to 'Public'.
     validations:
       required: true
+
   - type: checkboxes
-    id: terms
+    id: presence_check
     attributes:
-      label: Availability
+      label: Operational Commitment
       options:
-        - label: I am available Tue-Sat and can attend the 9 PM DSM on MS Teams.
+        - label: I confirm I am available Tue-Sat and can attend the 9 PM DSM on MS Teams.
           required: true
+        - label: I have manually updated the Issue Title and removed all bracketed placeholders.
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        *Note: Submissions that retain the text "[Your Full Name]" in the title will be closed automatically.*
