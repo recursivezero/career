@@ -1,5 +1,5 @@
 name: "Auto Format Issue Title"
-run-name: format issue title based on issue prefix
+run-name: format issue title
 
 on:
   issues:
@@ -28,7 +28,9 @@ jobs:
       contains(github.event.issue.title, format('{0}-', vars.PROJECT_PREFIX)) == false
 
     steps:
-      - name: Format issue title
-        uses: recursivezero/action-club/.github/actions/format-issue-title@v0.2.58
+      - uses: actions/checkout@v6
+      - name: Format Issue Title
+        uses: recursivezero/action-club/.github/actions/format-issue-title@main
         with:
           prefix: ${{ vars.PROJECT_PREFIX }}
+          issue_number: ${{ github.event.inputs.issue_number }}
