@@ -1,0 +1,34 @@
+name: "Auto Format Issue Title"
+run-name: format issue title based on issue prefix
+
+on:
+  issues:
+    types: [opened, edited]
+
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: "Issue number to format manually"
+        required: true
+        type: string
+
+concurrency:
+  group: format-title-${{ github.event.inputs.issue_number || github.event.issue.number }}
+  cancel-in-progress: true
+
+permissions:
+  issues: write
+
+jobs:
+  format_title:
+    runs-on: ubuntu-latest
+    # Skip only if it's an automated event AND the prefix is already present
+    if: |
+      github.event_name == 'workflow_dispatch' || 
+      contains(github.event.issue.title, format('{0}-', vars.PROJECT_PREFIX)) == false
+
+    steps:
+      - name: Format issue title
+        uses: recursivezero/action-club/.github/actions/format-issue-title@v0.2.58
+        with:
+          prefix: ${{ vars.PROJECT_PREFIX }}
